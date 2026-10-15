@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">PB Tracker</string>
+    <string name="launch_url">https://celebrated-cobbler-cdbd6e.netlify.app</string>
+    <string name="asset_statements">
+        [{
+            \"relation\": [\"delegate_permission/common.handle_all_urls\"],
+            \"target\": {
+                \"namespace\": \"web\",
+                \"site\": \"https://celebrated-cobbler-cdbd6e.netlify.app\"
+            }
+        }]
+    </string>
+</resources>

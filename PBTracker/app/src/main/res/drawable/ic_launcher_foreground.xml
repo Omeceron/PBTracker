@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Simple "PB" monogram icon foreground -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+  <!-- Blue accent circle -->
+  <path
+      android:fillColor="#4f9cf9"
+      android:pathData="M54,54m-38,0a38,38 0,1 1,76 0a38,38 0,1 1,-76 0"/>
+  <!-- "PB" text rendered as simple shapes -->
+  <!-- P -->
+  <path
+      android:fillColor="#ffffff"
+      android:pathData="M30,36 L30,72 L36,72 L36,58 L42,58 C48,58 52,54 52,47 C52,40 48,36 42,36 Z M36,42 L42,42 C44.5,42 46,43.5 46,47 C46,50.5 44.5,52 42,52 L36,52 Z"/>
+  <!-- B -->
+  <path
+      android:fillColor="#ffffff"
+      android:pathData="M56,36 L56,72 L66,72 C72,72 76,69 76,63.5 C76,60 74.5,57.5 72,56.5 C74,55.5 75,53.5 75,51 C75,45.5 71.5,36 65,36 Z M62,42 L65,42 C67.5,42 69,43.5 69,46.5 C69,49.5 67.5,51 65,51 L62,51 Z M62,57 L66,57 C69,57 70.5,58.5 70.5,62 C70.5,65.5 69,66 66,66 L62,66 Z"/>
+</vector>

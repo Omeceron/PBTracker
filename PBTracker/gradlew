@@ -1,0 +1,6 @@
+#!/bin/sh
+# Gradle wrapper script for Unix
+exec "$(dirname "$0")/gradle/wrapper/gradle-wrapper" "$@" 2>/dev/null || {
+  JAVA_OPTS="" exec java -cp "$(dirname "$0")/gradle/wrapper/gradle-wrapper.jar" \
+    org.gradle.wrapper.GradleWrapperMain "$@"
+}

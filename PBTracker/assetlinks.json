@@ -1,0 +1,10 @@
+[{
+  "relation": ["delegate_permission/common.handle_all_urls"],
+  "target": {
+    "namespace": "android_app",
+    "package_name": "app.netlify.pbtracker.twa",
+    "sha256_cert_fingerprints": [
+      "C0:56:AE:96:25:49:55:88:C3:2A:C6:D9:66:70:C2:04:67:EF:91:35:5D:44:CF:0C:44:EC:C4:74:65:92:D2:A3"
+    ]
+  }
+}]
