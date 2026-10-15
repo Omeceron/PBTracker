@@ -21,14 +21,14 @@ jobs:
 
       - name: Decode keystore
         run: |
-          echo "${{ secrets.KEYSTORE_BASE64 }}" | base64 --decode > app/pbtracker.jks
+          echo "${{ secrets.KEYSTORE_BASE64 }}" | base64 --decode > pbtracker.jks
 
       - name: Make gradlew executable
         run: chmod +x gradlew
 
       - name: Build release AAB
         env:
-          KEYSTORE_PATH: pbtracker.jks
+          KEYSTORE_PATH: ../pbtracker.jks
           KEYSTORE_PASSWORD: ${{ secrets.KEYSTORE_PASSWORD }}
           KEY_ALIAS: ${{ secrets.KEY_ALIAS }}
           KEY_PASSWORD: ${{ secrets.KEY_PASSWORD }}
