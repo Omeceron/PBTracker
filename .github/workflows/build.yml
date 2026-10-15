@@ -21,22 +21,23 @@ jobs:
 
       - name: Decode keystore
         run: |
-          echo "${{ secrets.KEYSTORE_BASE64 }}" | base64 --decode > pbtracker.jks
+          echo "${{ secrets.KEYSTORE_BASE64 }}" | base64 --decode > PBTracker/app/pbtracker.jks
 
-      - name: Make gradlew executable
-        run: chmod +x gradlew
+      - name: Install Android SDK 35
+        run: |
+          yes | $ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager "platforms;android-35" "build-tools;35.0.0"
 
       - name: Build release AAB
         env:
-          KEYSTORE_PATH: ../pbtracker.jks
+          KEYSTORE_PATH: pbtracker.jks
           KEYSTORE_PASSWORD: ${{ secrets.KEYSTORE_PASSWORD }}
           KEY_ALIAS: ${{ secrets.KEY_ALIAS }}
           KEY_PASSWORD: ${{ secrets.KEY_PASSWORD }}
-        run: ./gradlew bundleRelease
+        run: cd PBTracker && gradle bundleRelease
 
       - name: Upload AAB artifact
         uses: actions/upload-artifact@v4
         with:
           name: pb-tracker-release
-          path: app/build/outputs/bundle/release/app-release.aab
+          path: PBTracker/app/build/outputs/bundle/release/app-release.aab
           retention-days: 30
